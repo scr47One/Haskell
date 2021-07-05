@@ -2,7 +2,7 @@
 -- import Data.Tree ()
 -- data Arbol a = Hoja | Nodo a (Arbol a )(Arbol a) deriving (Show, Eq)
 -- arbol = Nodo 9(Nodo 3(Nodo 2(Nodo 5 Hoja Hoja)(Nodo 3 Hoja Hoja))(Nodo 4 Hoja Hoja))(Nodo 7(Nodo 8 Hoja Hoja)(Nodo 9 Hoja Hoja))
-
+-- hoal
 -- nNodos :: Arbol a -> Integer
 -- nNodos Hoja = 0
 -- nNodos (Nodo x i d)= 1+nNodos i + nNodos d
