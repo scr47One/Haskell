@@ -74,7 +74,7 @@ basicos ((v,b):(n,m):bv) = if v>= n then v+basicos ((n,m):bv)
 else basicos bv
 basicos ((v,b):[])=v
 basicos []=0
-basicos [(_,_)]=0
+-- basicos [(_,_)]=0
 
 {- sumaDif recibe la lista de los numeros, la lista de valores y regresa la suma de estos -}
 {- recibimos una lista de tuplas con los numeros romanos de los casos diferentes para compararlos con la lista de valores que tenemos
