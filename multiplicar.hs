@@ -4,6 +4,23 @@ contador :: Integer -> Integer -> String
 contador x y = if x == y then show y
 else contador (x+1) y
 
+division :: Integer -> Integer -> Integer
+division a b | b > a = 0
+    | a== 0 = 0
+    | b==0 = 0
+    | b==a= 1+ division (a-b) b
+    | otherwise = 1+ division (a-b) b
+-- >>> division 16 4
+-- 2
+
+multiplicar :: Integer -> Integer -> Integer
+multiplicar x 0 = 0
+multiplicar x y =  x+multiplicar x (y-1)
+
+-- >>> multiplicar 3 0
+-- 0
+--
+
 cont :: Integer -> Integer -> Integer
 cont num 0=0
 cont num x =num + cont num (x-1)
@@ -41,9 +58,10 @@ num <-getLine
 putStr "el resultado es :"
 putStrLn (show(contador1(read num)(read num)))
 
-contador2 :: Integer-> Integer-> Integer
+{- contador2 :: Integer-> Integer-> Integer
 contador2 m z = if z <= m then ((z*m)+(z+1))+contador2 m (z+1)
 else 0
-serie :: Integer -> Integer -> Integer
+ -}
+{- serie :: Integer -> Integer -> Integer
 serie 0 n = 0
-serie i n = 
+serie i n =  -}
