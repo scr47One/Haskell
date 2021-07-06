@@ -13,14 +13,6 @@ division a b | b > a = 0
 -- >>> division 16 4
 -- 2
 
-multiplicar :: Integer -> Integer -> Integer
-multiplicar x 0 = 0
-multiplicar x y =  x+multiplicar x (y-1)
-
--- >>> multiplicar 3 0
--- 0
---
-
 cont :: Integer -> Integer -> Integer
 cont num 0=0
 cont num x =num + cont num (x-1)
@@ -47,6 +39,23 @@ pot x y = x*pot x (y-1)
 potencia :: Int -> Int -> Int
 potencia m 0 =0
 potencia m n = (m*(potencia m (n-1))+m)
+
+{- ((N+1)! ^(M!)), ((N+2)!^(M!)), ((N+3)!^(M!)) -}
+facta :: Integer -> Integer
+facta n = if n == 0 then 1
+else multiplicar n  (facta (n-1))
+
+multiplicar :: Integer -> Integer -> Integer
+multiplicar x 0 = 0
+multiplicar x y =  x+multiplicar x (y-1)
+
+ejercicio :: Integer -> Integer -> Integer -> Integer
+ejercicio n m c = if c == 0 then 0
+else (pot (facta (n+1)) (facta m)) + ejercicio (n+1) m (c-1)
+
+-- >>> ejercicio 9 9 3
+-- ProgressCancelledException
+
 
 contador1  :: Integer -> Integer -> Integer
 contador1 num 0 =0
