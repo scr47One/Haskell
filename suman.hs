@@ -1,5 +1,3 @@
-
-
 facta :: Integer -> Integer
 facta n = if n == 0 then 1
 else n * facta (n-1)
