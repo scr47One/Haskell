@@ -19,7 +19,7 @@ main=do
     putStrLn"Ingresa la Base"
     m<-getLine
     putStrLn"Ingresa la Potencia"
-    p<-getLine
+    n<-getLine
     putStrLn"Ingresa la Iteración"
     i<-getLine
     putStrLn"El resultado es="
