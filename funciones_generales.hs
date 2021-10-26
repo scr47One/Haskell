@@ -74,3 +74,7 @@ else 0
 {- serie :: Integer -> Integer -> Integer
 serie 0 n = 0
 serie i n =  -}
+ordena:: Ord a => [a] -> [a]
+ordena [] = []
+ordena xs = m : ordena (delete m xs)
+    where m = minimum xs       

@@ -1,9 +1,9 @@
 {- numerosRomanos regresa la lista de números romanos -}
-numerosRomanos :: [String] -- aqui pongo los numeros romanos
+-- numerosRomanos :: [String] -- aqui pongo los numeros romanos
 numerosRomanos = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
  
 {-valor regresa los valores de los numeros romanos -}
-valor :: [Integer] -- aquí pongo los valores de los números romanos y los casos especiales
+-- valor :: [Integer] -- aquí pongo los valores de los números romanos y los casos especiales
 valor = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
  
 {- juntarN es para que sepamos el valor de cada numero romano, asociado a su valor -}
